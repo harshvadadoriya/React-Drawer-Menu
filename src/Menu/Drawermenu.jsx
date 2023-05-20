@@ -1,7 +1,6 @@
 import React from 'react';
 import {
 	Box,
-	Stack,
 	ChakraProvider,
 	Drawer,
 	DrawerBody,
@@ -10,25 +9,11 @@ import {
 	DrawerOverlay,
 	DrawerContent,
 	DrawerCloseButton,
-	Spacer,
 } from '@chakra-ui/react';
-import { Button, ButtonGroup } from '@chakra-ui/react';
+import { Button } from '@chakra-ui/react';
 import { useDisclosure } from '@chakra-ui/react';
-import { Input } from '@chakra-ui/react';
 import { HamburgerIcon } from '@chakra-ui/icons';
-import {
-	Menu,
-	MenuButton,
-	MenuList,
-	MenuItem,
-	MenuItemOption,
-	MenuGroup,
-	MenuOptionGroup,
-	IconButton,
-	MenuDivider,
-} from '@chakra-ui/react';
-import { AddIcon, RepeatIcon, EditIcon } from '@chakra-ui/icons';
-import { Link } from 'react-router-dom';
+import { Menu, MenuItem, MenuGroup, MenuDivider } from '@chakra-ui/react';
 import { NavLink } from 'react-router-dom';
 import Darkmode from '../Darkmode';
 const Drawermenu = () => {
@@ -37,13 +22,6 @@ const Drawermenu = () => {
 
 	return (
 		<ChakraProvider>
-			{/* 	<div className="container-fluid">
-				<div className="row" className="ms-1">
-					<Button m={5} ref={btnRef} colorScheme="teal" onClick={onOpen}>
-						<HamburgerIcon />
-					</Button>
-				</div>
-			</div> */}
 			<Box p={6}>
 				<Button ref={btnRef} colorScheme="teal" onClick={onOpen}>
 					<HamburgerIcon />
@@ -64,35 +42,27 @@ const Drawermenu = () => {
 							<Menu>
 								{/* <MenuDivider /> */}
 								<Box>
-									<MenuGroup title="Pages">
+									<MenuGroup>
 										<MenuItem onClick={onClose}>
 											<NavLink to="/">Home</NavLink>
 										</MenuItem>
 
 										<MenuItem onClick={onClose}>
-											<NavLink to="/about">About</NavLink>
+											<NavLink to="/product-management">
+												Product Management
+											</NavLink>
 										</MenuItem>
 										<MenuItem onClick={onClose}>
-											<NavLink to="/projects">Projects</NavLink>
+											<NavLink to="/order-management">Order Management</NavLink>
 										</MenuItem>
 										<MenuItem onClick={onClose}>
-											<NavLink to="/skills">Skills</NavLink>
-										</MenuItem>
-										<MenuItem onClick={onClose}>
-											<NavLink to="/contact">Contact</NavLink>
+											<NavLink to="/user-management">User Management</NavLink>
 										</MenuItem>
 									</MenuGroup>
 									<MenuDivider />
-									<MenuGroup title="Help">
-										<MenuItem>Docs</MenuItem>
-										<MenuItem>FAQ</MenuItem>
-									</MenuGroup>
 								</Box>
 							</Menu>
 						</DrawerBody>
-						{/* <DrawerBody>
-							<Input placeholder="Type here..." />
-						</DrawerBody> */}
 						<DrawerFooter>
 							<Box>
 								<Button mr={4} colorScheme="teal" variant="outline">
