@@ -40,24 +40,20 @@ const Drawermenu = () => {
 						<DrawerBody>
 							<MenuDivider />
 							<Menu>
-								{/* <MenuDivider /> */}
 								<Box>
 									<MenuGroup>
-										<MenuItem onClick={onClose}>
-											<NavLink to="/">Home</NavLink>
-										</MenuItem>
-
-										<MenuItem onClick={onClose}>
-											<NavLink to="/product-management">
-												Product Management
-											</NavLink>
-										</MenuItem>
-										<MenuItem onClick={onClose}>
-											<NavLink to="/order-management">Order Management</NavLink>
-										</MenuItem>
-										<MenuItem onClick={onClose}>
-											<NavLink to="/user-management">User Management</NavLink>
-										</MenuItem>
+										<NavLink to="/">
+											<MenuItem onClick={onClose}>Home</MenuItem>
+										</NavLink>
+										<NavLink to="/product-management">
+											<MenuItem onClick={onClose}>Product Management</MenuItem>
+										</NavLink>
+										<NavLink to="/order-management">
+											<MenuItem onClick={onClose}>Order Management</MenuItem>
+										</NavLink>
+										<NavLink to="/user-management">
+											<MenuItem onClick={onClose}>User Management</MenuItem>
+										</NavLink>
 									</MenuGroup>
 									<MenuDivider />
 								</Box>

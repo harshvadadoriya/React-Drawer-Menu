@@ -1,24 +1,31 @@
-import { Box, Button, Spacer, Stack, Text } from '@chakra-ui/react';
+import { Box, Button, Container, Image, Spacer } from '@chakra-ui/react';
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import PageNotFoundImg from '../assets/404-error.gif';
 
 const PageNotFound = () => {
+	const navigate = useNavigate();
+	const goBack = () => {
+		navigate(-1);
+	};
+
 	return (
 		<>
 			<center>
-				<Box
+				<Container
 					width={10 / 12}
-					textAlign={'justify'}
+					textAlign={'center'}
 					justifyContent={'center'}
 					display={'flex'}
 				>
-					<Text>Page Not Found</Text>
-				</Box>
+					<Box>
+						<Image src={PageNotFoundImg} alt="Page Not Found" />
+						<Button colorScheme="teal" variant="solid" onClick={goBack}>
+							Go Back
+						</Button>
+					</Box>
+				</Container>
 				<Spacer mt={'2'} />
-				<Stack direction="row" display={'flex'} justifyContent={'center'}>
-					<Button colorScheme="teal" variant="solid">
-						Go Back
-					</Button>
-				</Stack>
 			</center>
 		</>
 	);

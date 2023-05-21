@@ -11,7 +11,7 @@ const UserManagement = () => {
 					justifyContent={'center'}
 					display={'flex'}
 				>
-					<h1>UserManagement page</h1>
+					<h1>User Management Page</h1>
 				</Box>
 			</center>
 		</>

@@ -10,16 +10,18 @@ import PageNotFound from './Pages/PageNotFound';
 
 const App = () => {
 	return (
-		<Router>
-			<Drawermenu />
-			<Routes>
-				<Route path="/" element={<Home />} />
-				<Route path="/product-management" element={<ProductManagement />} />
-				<Route path="/order-management" element={<OrderManagement />} />
-				<Route path="/user-management" element={<UserManagement />} />
-				<Route path="*" element={<PageNotFound />} />
-			</Routes>
-		</Router>
+		<>
+			<Router>
+				<Drawermenu />
+				<Routes>
+					<Route path="/" element={<Home />} />
+					<Route path="/product-management" element={<ProductManagement />} />
+					<Route path="/order-management" element={<OrderManagement />} />
+					<Route path="/user-management" element={<UserManagement />} />
+					<Route path="*" element={<PageNotFound />} />
+				</Routes>
+			</Router>
+		</>
 	);
 };
 

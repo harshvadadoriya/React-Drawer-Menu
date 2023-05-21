@@ -11,7 +11,7 @@ const ProductManagement = () => {
 					justifyContent={'center'}
 					display={'flex'}
 				>
-					<h1>ProductManagement page</h1>
+					<h1>Product Management page</h1>
 				</Box>
 			</center>
 		</>
